@@ -1,0 +1,25 @@
+{
+  "locales": [
+    "en-US",
+    "zh-TW",
+    "zh-CN"
+  ],
+  "defaultLocale": "zh-TW",
+  "pages": {
+    "*": [
+      "common"
+    ],
+    "/": [
+      "home"
+    ],
+    "/rules": [
+      "rules"
+    ],
+    "/about": [
+      "about"
+    ],
+    "/info": [
+      "info"
+    ]
+  }
+}
