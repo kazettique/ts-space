@@ -4,7 +4,7 @@
     "zh-TW",
     "zh-CN"
   ],
-  "defaultLocale": "zh-TW",
+  "defaultLocale": "en-US",
   "pages": {
     "*": [
       "common"
