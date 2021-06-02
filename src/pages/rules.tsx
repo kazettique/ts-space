@@ -6,7 +6,13 @@ import Head from 'next/head';
 // i18n
 import useTranslation from 'next-translate/useTranslation';
 
-export default function rules(): ReactElement {
+// component
+
+interface Props {
+  children: ReactElement | string;
+}
+
+export default function rules({ children }: Props): ReactElement {
   const { t } = useTranslation();
 
   return (
@@ -16,8 +22,10 @@ export default function rules(): ReactElement {
       </Head>
       <div>
         <div>
-          <h4>{t(`rules:rulesContent`)}</h4>
-          <h5>廚房</h5>
+          <h1 className="text-6xl text-gray-50">{t(`rules:rulesContent`)}</h1>
+          {children}
+
+          {/* <h5>廚房</h5>
           <ul>
             <li>請共同⋯⋯</li>
             <li>使用過⋯⋯</li>
@@ -72,7 +80,7 @@ export default function rules(): ReactElement {
             necessitatibus accusantium natus. Deleniti praesentium eaque dolorem animi quis tempora esse aspernatur quod mollitia adipisci, ipsum
             voluptatibus commodi quam suscipit, corporis expedita. Cupiditate a itaque nostrum expedita ipsum quibusdam dolorem sapiente enim aperiam
             quisquam.
-          </p>
+          </p> */}
         </div>
       </div>
     </>

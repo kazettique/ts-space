@@ -6,7 +6,13 @@ import Head from 'next/head';
 // i18n
 import useTranslation from 'next-translate/useTranslation';
 
-export default function info(): ReactElement {
+// component
+
+interface Props {
+  children: ReactElement | string;
+}
+
+export default function info({ children }: Props): ReactElement {
   const { t } = useTranslation();
 
   return (
@@ -14,7 +20,8 @@ export default function info(): ReactElement {
       <Head>
         <title>{t(`common:info`)}</title>
       </Head>
-      <h1>this is {t(`common:info`)} page!</h1>
+      <h1 className="text-6xl text-gray-50">this is {t(`common:info`)} page!</h1>
+      {children}
     </>
   );
 }

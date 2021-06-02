@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "@heroicons/react": "1.0.1",
     "next": "10.2.0",
     "next-translate": "1.0.7",
     "react": "17.0.2",
