@@ -1,3 +1,10 @@
 {
-  
+  "mailSubject": "I want to help translating",
+  "mailBody": "Please tell me what language you want to translate, thank you!",
+  "greeting": "Hello~ I'm Woody. I built this site. Nice to me ya!",
+  "greeting2": "Hope you enjoying the useful stuff here.",
+  "translatorRequest": {
+    "title": "Request for volunteer translator",
+    "content": "Some pages are translated by Google, wanna help me to translate it into your native language? Please contact me!"
+  }
 }

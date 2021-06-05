@@ -1,3 +1,10 @@
 {
-  
+  "mailSubject": "我想要翻译",
+  "mailBody": "请告诉您想要翻译的语言，谢谢~",
+  "greeting": "Hi~ 我是这个站的作者 Woody，很高兴认识你(妳)！",
+  "greeting2": "希望这里能提供一些有用的资讯，让大家参考～",
+  "translatorRequest": {
+    "title": "翻译志工募集中",
+    "content": "目前有些地方是用 Google 翻译，若有兴趣翻译成其他语言的人，请跟我联络~"
+  }
 }
