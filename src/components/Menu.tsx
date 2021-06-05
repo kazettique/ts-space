@@ -1,5 +1,5 @@
 // react
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
 
 // next
 import Link from 'next/link';
@@ -53,16 +53,15 @@ export default function Menu({ isHome }: propTypes): ReactElement {
   const { t } = useTranslation();
   const { asPath } = useRouter();
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
   return (
     <>
       {isHome ? (
         <div className="bg-gray-700 rounded-md mt-10 bg-opacity-40">
           {getMenuList(menuList, isHome).map((menuItem) => (
-            <MenuItem key={menuItem.pageName} isHome>
+            <MenuItem key={menuItem.pageName}>
+              {/* <menuItem.iconComponent className="h-5 w-5 cursor-pointer mr-2" /> */}
               <Link href={menuItem.pageUrl}>
-                <a className="min-w-full p-5">{t(`common:${menuItem.pageName}`)}</a>
+                <a className="block w-full p-5">{t(`common:${menuItem.pageName}`)}</a>
               </Link>
             </MenuItem>
           ))}
@@ -71,20 +70,18 @@ export default function Menu({ isHome }: propTypes): ReactElement {
           </MenuItem> */}
         </div>
       ) : (
-        <div className="bg-gray-700 rounded-md bg-opacity-40 fixed top-5 right-5 h-16 hover:h-80 overflow-hidden duration-500">
-          <MenuItem>
-            <MenuAlt1Icon className="h-5 w-5 min-w-full m-5" />
+        <div className="bg-gray-700 rounded-md bg-opacity-90 lg:bg-opacity-40 fixed top-5 right-5 h-16 hover:h-80 transform translate-x-16 lg:translate-x-0 hover:translate-x-0 overflow-hidden duration-500">
+          <MenuItem className="p-5">
+            <MenuAlt1Icon className="h-5 w-5 lg:min-w-full" />
           </MenuItem>
           {getMenuList(menuList, isHome).map((menuItem) => (
-            <MenuItem
-              key={menuItem.pageName}
-              isHome={false}
-              className={menuItem.pageUrl === asPath ? `text-green-300` : ``}
-              IconComponent={menuItem.iconComponent}
-            >
-              <Link href={menuItem.pageUrl}>
-                <a className="min-w-full p-5">{t(`common:${menuItem.pageName}`)}</a>
-              </Link>
+            <MenuItem key={menuItem.pageName} className={menuItem.pageUrl === asPath ? `text-green-300` : ``}>
+              <div className="flex items-center">
+                <menuItem.iconComponent className="h-5 w cursor-pointer mr-2 absolute left-2" />
+                <Link href={menuItem.pageUrl}>
+                  <a className="block w-full p-5 pl-9">{t(`common:${menuItem.pageName}`)}</a>
+                </Link>
+              </div>
             </MenuItem>
           ))}
           {/* <MenuItem>

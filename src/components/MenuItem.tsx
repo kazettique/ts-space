@@ -1,18 +1,15 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 
 interface Props {
-  children: ReactElement | string;
-  isHome?: boolean;
+  children?: ReactNode | string;
   className?: string;
-  IconComponent?: any;
 }
 
-export default function MenuItem({ children, isHome = false, className, IconComponent = null }: Props): ReactElement {
+export default function MenuItem({ children, className }: Props): ReactElement {
   return (
     <div
-      className={`hover:bg-gray-500 text-gray-50 hover:text-yellow-300 cursor-pointer rounded-md duration-300 hover:bg-opacity-40 uppercase text-center flex justify-center ${className}`}
+      className={`hover:bg-gray-500 text-gray-50 hover:text-yellow-300 cursor-pointer rounded-md duration-300 hover:bg-opacity-40 uppercase text-center flex items-center ${className}`}
     >
-      {/* {IconComponent && <IconComponent className="h-5 w-5 m-5 text-green-300" />} */}
       {children}
     </div>
   );
