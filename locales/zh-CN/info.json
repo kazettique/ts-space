@@ -1,1 +1,51 @@
-{}
+{
+  "infoTitle": "生活资讯",
+  "garbageCollection": {
+    "locationTitle": "垃圾车地点",
+    "dateTimeTitle": "收垃圾时段",
+    "place": {
+      "no1": {
+        "place": "泰顺公园前",
+        "address": "大安区泰顺街38之1号",
+        "time": "18:45 - 19:10"
+      },
+      "no2": {
+        "place": "7-ELEVEN 鑫泰门市前",
+        "address": "大安区泰顺街64号",
+        "time": "21:50−21:55"
+      }
+    },
+    "latestInfo": "最新垃圾车资讯，请至",
+    "govSite": "台北市政府网站"
+  },
+  "sortType": {
+    "flammable": {
+      "name": "垃圾",
+      "day": "周一、周二、周四、周五、周六"
+    },
+    "recyclable": {
+      "name": "回收物",
+      "type1": {
+        "name": "塑胶类、瓶罐",
+        "day": "周二、周四、周六"
+      },
+      "type2": {
+        "name": "纸类",
+        "day": "周一、周五"
+      }
+    }
+  },
+  "cleaningSquadron": {
+    "title": "清洁队",
+    "name": "清洁队台大分队",
+    "address": "大安区辛亥路一段138号",
+    "dateTime": "每天，06:00 - 23:00"
+  },
+  "wifi": {
+    "title": "Wi-Fi",
+    "nameTitle": "名称",
+    "name": "daan****",
+    "passwordTitle": "密码",
+    "password": "010640124"
+  }
+}

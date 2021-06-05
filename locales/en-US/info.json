@@ -1,1 +1,51 @@
-{}
+{
+  "infoTitle": "Info",
+  "garbageCollection": {
+    "locationTitle": "Garbage Truck Location",
+    "dateTimeTitle": "Garbage Collecting Time",
+    "place": {
+      "no1": {
+        "place": "Taishun Park",
+        "address": "No. 38-1, Taishun Street, Da'an District",
+        "time": "18:45 - 19:10"
+      },
+      "no2": {
+        "place": "7-ELEVEN Xintai Store",
+        "address": "64 Taishun Street, Da'an District",
+        "time": "21:50 − 21:55"
+      }
+    },
+    "latestInfo": "For latest information, please refer to ",
+    "govSite": "Taipei City Government site"
+  },
+  "sortType": {
+    "flammable": {
+      "name": "Flammable",
+      "day": "Monday, Tuesday, Thursday, Friday, Saturday"
+    },
+    "recyclable": {
+      "name": "Recyclable",
+      "type1": {
+        "name": "Plastics, bottles and cans",
+        "day": "Tuesday, Thursday, Saturday"
+      },
+      "type2": {
+        "name": "Paper",
+        "day": "Monday, Friday"
+      }
+    }
+  },
+  "cleaningSquadron": {
+    "title": "Cleaning Squadron",
+    "name": "Cleaning Squadron NTU Department",
+    "address": "No.138, Sec.1, Xinhai Rd., Da’an Dist.",
+    "dateTime": "Everyday, 06:00 - 23:00"
+  },
+  "wifi": {
+    "title": "Wi-Fi",
+    "nameTitle": "Name",
+    "name": "daan****",
+    "passwordTitle": "Password",
+    "password": "010640124"
+  }
+}
