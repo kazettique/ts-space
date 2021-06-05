@@ -42,7 +42,7 @@ export default function rules({ children }: Props): ReactElement {
         {ruleList.map((item) => (
           <div key={item} className="m-3">
             <h3 className="text-lg lg:text-3xl font-semibold my-4">{t(`rules:p${item}_title`)}</h3>
-            <ul className="list-disc my-2">
+            <ul className="list-disc my-2 ml-4">
               {getParagraphList(t(`rules:p${item}`)).map((listItem) => (
                 <li key={`${t(`rules:p${item}_title`)}-${listItem}`} className="my-2">
                   {listItem}
