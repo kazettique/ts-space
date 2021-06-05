@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
 // component
+import Page from '@/components/Page';
 import MachineTranslation from '@/components/MachineTranslation';
 
 // utils
@@ -35,7 +36,7 @@ export default function rules({ children }: Props): ReactElement {
       <Head>
         <title>{getCombinedHeadName([t(`common:siteTitle`), t(`common:rules`)])}</title>
       </Head>
-      <div className="w-full lg:w-4/5 bg-yellow-50 shadow-sm rounded-md p-5 lg:p-16 text-gray-700 h-auto mx-auto">
+      <Page>
         <h1 className="text-3xl lg:text-6xl text-center">{t(`rules:rulesTitle`)}</h1>
         {children}
         {ruleList.map((item) => (
@@ -51,7 +52,7 @@ export default function rules({ children }: Props): ReactElement {
           </div>
         ))}
         {showMachineTranslationMessage(locale) && <MachineTranslation />}
-      </div>
+      </Page>
     </>
   );
 }

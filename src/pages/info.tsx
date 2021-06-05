@@ -7,6 +7,7 @@ import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 
 // component
+import Page from '@/components/Page';
 import MapCard from '@/components/MapCard';
 import Card from '@/components/Card';
 
@@ -25,7 +26,7 @@ export default function info({ children }: Props): ReactElement {
       <Head>
         <title>{getCombinedHeadName([t(`common:siteTitle`), t(`common:info`)])}</title>
       </Head>
-      <div className="w-full lg:w-4/5 bg-yellow-50 shadow-sm rounded-md p-2 lg:p-16 text-gray-700 h-auto mx-auto">
+      <Page>
         <h1 className="text-3xl lg:text-6xl text-center">{t(`info:infoTitle`)}</h1>
         {children}
 
@@ -100,7 +101,7 @@ export default function info({ children }: Props): ReactElement {
             </li>
           </ul>
         </div>
-      </div>
+      </Page>
     </>
   );
 }
