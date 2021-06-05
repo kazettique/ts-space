@@ -14,7 +14,7 @@ interface Props {
   style?: CSSProperties;
 }
 
-export default function MapCard({ title = ``, address = ``, time = ``, mapUrl = ``, navUrl = ``, className = ``, style }: Props): ReactElement {
+export default function MapCard({ title = ``, address = ``, time = ``, mapUrl = ``, navUrl = ``, className = ``, style = {} }: Props): ReactElement {
   const { t } = useTranslation();
 
   return (
