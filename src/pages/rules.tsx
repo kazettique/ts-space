@@ -37,7 +37,7 @@ export default function rules({ children }: Props): ReactElement {
         <title>{getCombinedHeadName([t(`common:siteTitle`), t(`common:rules`)])}</title>
       </Head>
       <Page>
-        <h1 className="text-3xl lg:text-6xl text-center">{t(`rules:rulesTitle`)}</h1>
+        <h1 className="text-3xl lg:text-6xl text-center">{t(`common:rules`)}</h1>
         {children}
         {ruleList.map((item) => (
           <div key={item} className="m-3">

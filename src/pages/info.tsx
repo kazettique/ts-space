@@ -27,7 +27,7 @@ export default function info({ children }: Props): ReactElement {
         <title>{getCombinedHeadName([t(`common:siteTitle`), t(`common:info`)])}</title>
       </Head>
       <Page>
-        <h1 className="text-3xl lg:text-6xl text-center">{t(`info:infoTitle`)}</h1>
+        <h1 className="text-3xl lg:text-6xl text-center">{t(`common:info`)}</h1>
         {children}
 
         {/* Garbage collection location section */}
