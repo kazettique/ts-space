@@ -38,12 +38,10 @@ export default function about({ children }: Props): ReactElement {
       <Page title={t(`common:about`)}>
         <p>{t(`about:greeting`)}</p>
         <p>{t(`about:greeting2`)}</p>
-        <div className="my-8 flex items-center">
-          <ExclamationIcon className="h-8 w-8" />
-          <ExclamationIcon className="h-8 w-8" />
-          <h3 className="text-3xl capitalize">{t(`about:translatorRequest.title`)}</h3>
-          <ExclamationIcon className="h-8 w-8" />
-          <ExclamationIcon className="h-8 w-8" />
+        <div className="my-8 block lg:flex items-center">
+          <ExclamationIcon className="h-8 w-8 mx-auto lg:mr-0 text-red-600" />
+          <h4 className="text-2xl capitalize">{t(`about:translatorRequest.title`)}</h4>
+          <ExclamationIcon className="h-8 w-8 mx-auto lg:ml-0 text-red-600" />
         </div>
         <p>{t(`about:translatorRequest.content`)}</p>
         <div className="font-semibold">
