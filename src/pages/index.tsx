@@ -21,13 +21,15 @@ export default function Home({ children }: Props) {
       <Head>
         <title>{t(`common:siteTitle`)}</title>
       </Head>
-      <div className="text-center">
-        <h1 className="text-6xl text-gray-50">
-          {t(`home:greeting`)}
-          <br />
-          👋
-        </h1>
-        {children}
+      <div className="flex justify-center items-center h-full">
+        <div className="text-center">
+          <h1 className="text-6xl text-gray-50">
+            {t(`home:greeting`)}
+            <br />
+            👋
+          </h1>
+          {children}
+        </div>
       </div>
     </>
   );

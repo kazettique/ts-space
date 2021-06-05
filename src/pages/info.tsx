@@ -8,6 +8,9 @@ import useTranslation from 'next-translate/useTranslation';
 
 // component
 
+// utils
+import { getCombinedHeadName } from '@/utils';
+
 interface Props {
   children: ReactElement | string;
 }
@@ -18,7 +21,7 @@ export default function info({ children }: Props): ReactElement {
   return (
     <>
       <Head>
-        <title>{t(`common:info`)}</title>
+        <title>{getCombinedHeadName([t(`common:siteTitle`), t(`common:info`)])}</title>
       </Head>
       <h1 className="text-6xl text-gray-50">this is {t(`common:info`)} page!</h1>
       {children}

@@ -18,11 +18,11 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="fixed h-screen w-screen overflow-hidden filter blur-sm bg-yellow-800" style={{ zIndex: -2 }}>
-        {/* <Image src="/images/living-room.jpg" layout="fill" objectFit="cover" quality={100} /> */}
+      <div className="fixed h-screen w-screen overflow-hidden filter blur-sm" style={{ zIndex: -2 }}>
+        <Image src="/images/living-room.jpg" layout="fill" objectFit="cover" quality={100} />
       </div>
       <div className="fixed h-screen w-screen overflow-hidden bg-gray-900 opacity-30" style={{ zIndex: -1 }} />
-      <div className="h-screen w-screen flex justify-center items-center z-20">
+      <div className="overflow-y-scroll h-screen z-20 p-5 lg:p-16">
         <Component {...pageProps}>
           <Menu isHome={isHome} />
         </Component>
