@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 
 // component
 import Menu from 'components/Menu';
+import LanguageMenu from '@/components/LanguageMenu';
 
 export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className="fixed h-screen w-screen overflow-hidden bg-gray-900 opacity-30" style={{ zIndex: -1 }} />
       <div className="overflow-y-scroll h-screen z-20 p-5 lg:p-16">
         <Component {...pageProps}>
+          <LanguageMenu isHome={isHome} />
           <Menu isHome={isHome} />
         </Component>
       </div>

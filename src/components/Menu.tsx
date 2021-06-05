@@ -12,7 +12,6 @@ import { MenuAlt1Icon, HomeIcon, DocumentTextIcon, UserCircleIcon, InformationCi
 
 // component
 import MenuItem from 'components/MenuItem';
-// import LangButton from './LangButton';
 
 type MenuItem = {
   pageName: string;
@@ -43,13 +42,13 @@ const menuList: MenuItem[] = [
   },
 ];
 
-interface propTypes {
+interface Props {
   isHome: boolean;
 }
 
 const getMenuList = (list: MenuItem[], isHome: boolean): MenuItem[] => (isHome ? list.filter((item) => item.pageName !== `home`) : list);
 
-export default function Menu({ isHome }: propTypes): ReactElement {
+export default function Menu({ isHome }: Props): ReactElement {
   const { t } = useTranslation();
   const { asPath } = useRouter();
 
@@ -65,9 +64,6 @@ export default function Menu({ isHome }: propTypes): ReactElement {
               </Link>
             </MenuItem>
           ))}
-          <MenuItem>
-            <TranslateIcon className="h-5 w-5 min-w-full m-5" />
-          </MenuItem>
         </div>
       ) : (
         <div className="bg-gray-700 rounded-md bg-opacity-90 lg:bg-opacity-40 fixed top-5 right-5 h-16 hover:h-80 transform translate-x-16 lg:translate-x-0 hover:translate-x-0 overflow-hidden duration-500">
@@ -84,9 +80,6 @@ export default function Menu({ isHome }: propTypes): ReactElement {
               </div>
             </MenuItem>
           ))}
-          {/* <MenuItem>
-            <TranslateIcon className="h-5 w-5 min-w-full m-5" />
-          </MenuItem> */}
         </div>
       )}
     </>
