@@ -65,9 +65,9 @@ export default function Menu({ isHome }: propTypes): ReactElement {
               </Link>
             </MenuItem>
           ))}
-          {/* <MenuItem>
+          <MenuItem>
             <TranslateIcon className="h-5 w-5 min-w-full m-5" />
-          </MenuItem> */}
+          </MenuItem>
         </div>
       ) : (
         <div className="bg-gray-700 rounded-md bg-opacity-90 lg:bg-opacity-40 fixed top-5 right-5 h-16 hover:h-80 transform translate-x-16 lg:translate-x-0 hover:translate-x-0 overflow-hidden duration-500">

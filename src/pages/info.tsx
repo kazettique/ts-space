@@ -35,6 +35,7 @@ export default function info({ children }: Props): ReactElement {
         </div>
         <div className="block lg:flex">
           <MapCard
+            className="flex-grow"
             title={t(`info:garbageCollection.place.no1.place`)}
             address={t(`info:garbageCollection.place.no1.address`)}
             time={t(`info:garbageCollection.place.no1.time`)}
@@ -42,6 +43,7 @@ export default function info({ children }: Props): ReactElement {
             navUrl="https://goo.gl/maps/CkVkA5h3WZfL5jRt8"
           />
           <MapCard
+            className="flex-grow"
             title={t(`info:garbageCollection.place.no2.place`)}
             address={t(`info:garbageCollection.place.no2.address`)}
             time={t(`info:garbageCollection.place.no2.time`)}

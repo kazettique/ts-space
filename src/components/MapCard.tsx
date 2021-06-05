@@ -5,9 +5,9 @@ import React, { ReactElement, CSSProperties } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 
 interface Props {
-  title?: string;
-  address?: string;
-  time?: string;
+  title?: string | undefined;
+  address?: string | undefined;
+  time?: string | undefined;
   mapUrl?: string;
   navUrl?: string;
   className?: string;
