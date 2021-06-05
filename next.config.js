@@ -7,6 +7,12 @@ module.exports = {
   images: {
     domains: ['avatars.githubusercontent.com'],
   },
+  exportPathMap() {
+    return {
+      '/': { page: '/' },
+      '/about': { page: '/about' },
+    };
+  },
   basePath: debug ? '' : process.env.NEXT_PUBLIC_BASE_PATH,
   assetPrefix: debug ? '' : process.env.NEXT_PUBLIC_BASE_PATH,
 };
