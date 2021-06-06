@@ -25,7 +25,7 @@ jobs:
       - name: yarn config
         uses:
         with: borales/actions-yarn@v2.0.0
-          cmd: config set ignore-engines true    
+          cmd: config set ignore-engines true
       - name: Install packages
         uses: borales/actions-yarn@v2.0.0
         with:
