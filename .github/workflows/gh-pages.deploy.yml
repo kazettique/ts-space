@@ -22,24 +22,27 @@ jobs:
     steps:
       - name: Get files
         uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      
+      - name: Install Yarn
+        run: npm -g yarn
+
       - name: Install packages
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # will run `yarn install` command
+        run: yarn
+
       - name: Build project
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build # will run `yarn build` command
+        run: yarn build
+
       - name: Export static files
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: export
+        run: yarn export
+
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
