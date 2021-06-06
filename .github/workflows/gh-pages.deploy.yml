@@ -1,19 +1,23 @@
-name: Deploy to GitHub Pages
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
 
-    env:
-      NEXT_PUBLIC_BASE_PATH: /ts-space
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - name: Get files
@@ -22,10 +26,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: yarn config
-        uses: borales/actions-yarn@v2.0.0
-        with: 
-          cmd: config set ignore-engines true
       - name: Install packages
         uses: borales/actions-yarn@v2.0.0
         with:
