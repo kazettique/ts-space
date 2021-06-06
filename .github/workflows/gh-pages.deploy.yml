@@ -22,6 +22,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      - name: yarn config
+        uses:
+        with: borales/actions-yarn@v2.0.0
+          cmd: config set ignore-engines true    
       - name: Install packages
         uses: borales/actions-yarn@v2.0.0
         with:
