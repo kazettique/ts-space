@@ -14,6 +14,6 @@ module.exports = nextTranslate({
       '/rules': { page: '/rules' },
     };
   },
-  basePath: '',
-  assetPrefix: '',
+  basePath: '/',
+  assetPrefix: '/',
 });
