@@ -14,6 +14,6 @@ module.exports = nextTranslate({
       '/rules': { page: '/rules' },
     };
   },
-  // basePath: debug ? '' : process.env.NEXT_PUBLIC_BASE_PATH,
-  // assetPrefix: debug ? '' : process.env.NEXT_PUBLIC_BASE_PATH,
+  basePath: '',
+  assetPrefix: '',
 });
