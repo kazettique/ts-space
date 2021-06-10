@@ -9,7 +9,7 @@ interface Props {
   style?: CSSProperties;
 }
 
-export default function Card({ header, body, footer, children, className, style }: Props): ReactElement {
+export default function Card({ header, body, footer, children, className, style = {} }: Props): ReactElement {
   return (
     <div className={`rounded-md shadow-lg bg-green-50 p-6 m-4 flex flex-col ${className}`} style={style}>
       {header && <div className="text-lg font-semibold mb-4">{header}</div>}
