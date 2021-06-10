@@ -1,9 +1,8 @@
 const nextTranslate = require('next-translate');
 
-const debug = process.env.NODE_ENV !== 'production';
+// const debug = process.env.NODE_ENV !== 'production';
 
-module.exports = {
-  ...nextTranslate(),
+module.exports = nextTranslate({
   images: {
     domains: ['avatars.githubusercontent.com'],
   },
@@ -15,6 +14,6 @@ module.exports = {
       '/rules': { page: '/rules' },
     };
   },
-  basePath: debug ? '' : process.env.NEXT_PUBLIC_BASE_PATH,
-  assetPrefix: debug ? '' : process.env.NEXT_PUBLIC_BASE_PATH,
-};
+  // basePath: debug ? '' : process.env.NEXT_PUBLIC_BASE_PATH,
+  // assetPrefix: debug ? '' : process.env.NEXT_PUBLIC_BASE_PATH,
+});
